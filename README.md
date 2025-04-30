@@ -99,7 +99,8 @@ httpd.serve_forever()
 
 ![Screenshot 2025-04-30 133952](https://github.com/user-attachments/assets/1664c95a-26a0-4bdc-b65c-89bdb565284e)
 
-![Screenshot 2025-04-30 134008](https://github.com/user-attachments/assets/7e3f644a-bcdb-4dfc-85d4-2d2107b16ec4)
+![Screenshot 2025-04-30 134341](https://github.com/user-attachments/assets/4c9441db-e2a9-40fa-bbaf-7d2e621c3a38)
+
 
 
 
