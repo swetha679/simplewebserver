@@ -45,51 +45,64 @@ REG NO:212224040345
 ```
 from http.server import HTTPServer, BaseHTTPRequestHandler
 content = """
-<!DOCTYPE html>
 <html>
-<style>
-table, th, td {
-  border:1px solid black;
-}
-</style>
-<body>
-
-<h2>TH elements define table headers</h2>
-
-<table style="width:100%">
-  <tr>
-    <th>Person 1</th>
-    <th>Person 2</th>
-    <th>Person 3</th>
-  </tr>
-  <tr>
-    <td>Emil</td>
-    <td>Tobias</td>
-    <td>Linus</td>
-  </tr>
-  <tr>
-    <td>16</td>
-    <td>14</td>
-    <td>10</td>
-  </tr>
-</table>
-
-<p>To understand the example better, we have added borders to the table.</p>
-
-</body>
+    <head>
+        <style>
+            table{
+                border-top: 10;
+                border-bottom: 10;
+                border-left: 10;
+                border-right: 10;
+                border-color: black;
+            }
+            td{
+                background-color: aqua;
+                font-size: medium;
+            }
+            th{
+                background-color: lightblue;
+                font-size: 20;
+            }
+        </style>
+    </head>
+    <body bgcolor="lightgray">
+        <h1 style="color:darkgreen;text-align: center">TCP/IP Protocols - 24901190</h1>
+        <table align="center" border="10" cellpadding="15" cellspacing="0" width=700>
+            <tr">
+                <th style="color:blue">Layer</th>
+                <th style="color:blue">Protocol</th>
+            </tr>
+            <tr>
+                <td>Application Layer</td>
+                <td>HTTP, HTTPS, FTP, SMTP, DNS</td>
+            </tr>
+            <tr>
+                <td>Transport Layer</td>
+                <td>TCP, UDP, SCTP</td>
+            </tr>
+            <tr>
+                <td>Internet Layer</td>
+                <td>IP (IPv4, IPv6), ICMP, ARP</td>
+            </tr>
+            <tr>
+                <td>Network Access Layer</td>
+                <td>Ethernet, Wi-Fi, MAC, PPP</td>
+            </tr>
+            </th>
+        </table>
+    </body>
 </html>
-
 
 """
 class myhandler(BaseHTTPRequestHandler):
     def do_GET(self):
         print("request received")
         self.send_response(200)
-        self.send_header('content-type', 'text/html; charset=utf-8')
+        self.send_header('Content-type', 'text/html; charset=utf-8')
         self.end_headers()
         self.wfile.write(content.encode())
-server_address = ('',80)
-httpd = HTTPServer(server_address,myhandler)
+server_address = ('', 8000)
+httpd = HTTPServer(server_address, myhandler)
 print("my webserver is running...")
 httpd.serve_forever()
 ```
@@ -97,9 +110,11 @@ httpd.serve_forever()
 
 ## OUTPUT:
 
-![Screenshot 2025-04-30 133952](https://github.com/user-attachments/assets/1664c95a-26a0-4bdc-b65c-89bdb565284e)
+![Screenshot 2025-05-27 210742](https://github.com/user-attachments/assets/6f76a47e-a30a-4e08-b846-a80ef66300ba)
 
-![Screenshot 2025-04-30 134341](https://github.com/user-attachments/assets/4c9441db-e2a9-40fa-bbaf-7d2e621c3a38)
+
+![Screenshot 2025-05-27 210805](https://github.com/user-attachments/assets/67c2c169-2e77-44d2-af0d-80037a89fecb)
+
 
 
 
